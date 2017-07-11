@@ -8,13 +8,11 @@
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="ORIENTACION VOCACIONAL | INSCRIPCIONES | OFICINA CENTRAL DE ADMISION" name="description" />
         <meta content="OFICINA CENTRAL DE ADMISION" name="author" />
-        <!-- BEGIN GLOBAL MANDATORY STYLES -->
+        
         {!! Html::style('assets/global/plugins/font-awesome/css/font-awesome.min.css') !!}
         {!! Html::style('assets/global/plugins/simple-line-icons/simple-line-icons.min.css') !!}
         {!! Html::style('assets/global/plugins/bootstrap/css/bootstrap.min.css') !!}
         {!! Html::style('assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css') !!}
-        {!! Html::style('assets/global/plugins/select2/css/select2.min.css') !!}
-        {!! Html::style('assets/global/plugins/select2/css/select2-bootstrap.min.css') !!}
         {!! Html::style('assets/global/css/components.min.css') !!}
         {!! Html::style('assets/global/css/plugins.min.css') !!}
         {!! Html::style('assets/pages/css/login-3.min.css') !!}
@@ -86,8 +84,31 @@
                 </div>
                 <div class="form-group">
                     <div class="input-icon">
+                        <i class="fa fa-phone"></i>
+                        {!! Form::text('telefono',null,['class' => 'form-control placeholder-no-fix', 'placeholder' => 'Telefono o Celular', 'maxlength' => '12']) !!}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-icon">
                         <i class="fa fa-at"></i>
-                        {!! Form::email('email',null,['class' => 'form-control placeholder-no-fix', 'placeholder' => 'Correo Electronico', 'maxlength' => '50']) !!}
+                        {!! Form::email('email',null,['class' => 'form-control placeholder-no-fix', 'placeholder' => 'Correo Electronico', 'maxlength' => '70']) !!}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-icon">
+                        {!! Form::label('PUEDE SELECCIONAR UNA FACULTAD O LOS DOS') !!}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-icon">
+                        {!! Form::label('FIEECS - 21 DE JULIO') !!}
+                        {!! Form::checkbox('fieecs','true',false) !!}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-icon">
+                        {!! Form::label('FISS - 26 DE JULIO') !!}
+                        {!! Form::checkbox('fiis','true',false) !!}
                     </div>
                 </div>
                 <div class="form-group">
@@ -103,12 +124,7 @@
         {!! Html::script('assets/global/plugins/js.cookie.min.js') !!}
         {!! Html::script('assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js') !!}
         {!! Html::script('assets/global/plugins/jquery.blockui.min.js') !!}
-        {!! Html::script('assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js') !!}
-        {!! Html::script('assets/global/plugins/jquery-validation/js/jquery.validate.min.js') !!}
-        {!! Html::script('assets/global/plugins/jquery-validation/js/additional-methods.min.js') !!}
-        {!! Html::script('assets/global/plugins/select2/js/select2.full.min.js') !!}
         {!! Html::script('assets/global/scripts/app.min.js') !!}
-        {!! Html::script('assets/pages/scripts/login.min.js') !!}
     </body>
 
 </html>

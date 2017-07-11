@@ -20,8 +20,11 @@ class CreateInscripcionTable extends Migration
             $table->string('nombres',80);
             $table->integer('edad');
             $table->string('dni',8)->unique();
-            $table->string('email',50);
+            $table->string('telefono',12);
+            $table->string('email',70);
             $table->string('colegio',200);
+            $table->boolean('fieecs')->nullable();
+            $table->boolean('fiis')->nullable();
             $table->timestamps();
         });
     }

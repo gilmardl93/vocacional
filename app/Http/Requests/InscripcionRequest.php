@@ -35,7 +35,7 @@ class InscripcionRequest extends FormRequest
             'nombres' => 'required|max:80',
             'edad' => 'required|numero',
             'dni' => 'required|numero|min:8',
-            'email' => 'required|email|max:50',
+            'email' => 'required|email|max:70',
             'colegio' => 'required|max:200'
         ]; 
 
