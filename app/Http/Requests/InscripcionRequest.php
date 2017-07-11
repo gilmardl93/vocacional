@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Validator;
 
 class InscripcionRequest extends FormRequest
 {
@@ -23,14 +24,28 @@ class InscripcionRequest extends FormRequest
      */
     public function rules()
     {
+        Validator::extend('numero', function($attribute, $value, $parameters)
+        {
+            return preg_match('/^([0-9])+$/i', $value);
+        });  
+
         return [
-            'paterno' => 'required',
-            'materno' => 'required',
-            'nombres' => 'required',
-            'edad' => 'required|numeric',
-            'dni' => 'required|numeric',
-            'email' => 'required|email',
-            'colegio' => 'required'
+            'paterno' => 'required|max:50',
+            'materno' => 'required|max:50',
+            'nombres' => 'required|max:80',
+            'edad' => 'required|numero',
+            'dni' => 'required|numero|min:8',
+            'email' => 'required|email|max:50',
+            'colegio' => 'required|max:200'
         ]; 
+
+    } 
+
+    public function messages()
+    {
+        return [
+            'edad.numero' => 'El campo edad debe ser númerico',
+            'dni.numero' => 'El campo dni debe ser númerico'
+        ];
     }
 }

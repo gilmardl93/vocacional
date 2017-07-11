@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('logitos', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
 Route::get('/','InscripcionController@index');

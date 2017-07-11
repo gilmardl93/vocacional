@@ -51,19 +51,19 @@
                 <div class="form-group">
                     <div class="input-icon">
                         <i class="fa fa-user"></i>
-                        {!! Form::text('paterno',null,['class' => 'form-control placeholder-no-fix', 'placeholder' => 'Apellido Paterno']) !!}
+                        {!! Form::text('paterno',null,['class' => 'form-control placeholder-no-fix', 'placeholder' => 'Apellido Paterno', 'maxlength' => '50']) !!}
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-icon">
                         <i class="fa fa-user"></i>
-                        {!! Form::text('materno',null,['class' => 'form-control placeholder-no-fix', 'placeholder' => 'Apellido Materno']) !!}
+                        {!! Form::text('materno',null,['class' => 'form-control placeholder-no-fix', 'placeholder' => 'Apellido Materno', 'maxlength' => '50']) !!}
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-icon">
                         <i class="fa fa-user"></i>
-                        {!! Form::text('nombres',null,['class' => 'form-control placeholder-no-fix', 'placeholder' => 'Nombres']) !!}
+                        {!! Form::text('nombres',null,['class' => 'form-control placeholder-no-fix', 'placeholder' => 'Nombres', 'maxlength' => '80']) !!}
                     </div>
                 </div>
                 <div class="form-group">
@@ -81,13 +81,13 @@
                 <div class="form-group">
                     <div class="input-icon">
                         <i class="fa fa-diamond"></i>
-                        {!! Form::text('colegio',null,['class' => 'form-control placeholder-no-fix', 'placeholder' => 'Institucion Educativa']) !!}
+                        {!! Form::text('colegio',null,['class' => 'form-control placeholder-no-fix', 'placeholder' => 'Institucion Educativa', 'maxlength' => '200']) !!}
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-icon">
                         <i class="fa fa-at"></i>
-                        {!! Form::email('email',null,['class' => 'form-control placeholder-no-fix', 'placeholder' => 'Correo Electronico']) !!}
+                        {!! Form::email('email',null,['class' => 'form-control placeholder-no-fix', 'placeholder' => 'Correo Electronico', 'maxlength' => '50']) !!}
                     </div>
                 </div>
                 <div class="form-group">

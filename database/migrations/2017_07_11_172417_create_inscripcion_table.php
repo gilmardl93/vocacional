@@ -15,13 +15,13 @@ class CreateInscripcionTable extends Migration
     {
         Schema::create('inscripcion', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('paterno');
-            $table->string('materno');
-            $table->string('nombres');
+            $table->string('paterno',50);
+            $table->string('materno',50);
+            $table->string('nombres',80);
             $table->integer('edad');
-            $table->string('dni')->unique();
-            $table->string('email');
-            $table->string('colegio');
+            $table->string('dni',8)->unique();
+            $table->string('email',50);
+            $table->string('colegio',200);
             $table->timestamps();
         });
     }
