@@ -22,8 +22,8 @@
     <body class=" login">
 
         <div class="logo">
-            <a href="index.html">
-                <img src="{!! asset('assets/pages/img/logo-big.png') !!}" alt="" /> </a>
+            <a href="">
+                <img src="{!! asset('assets/pages/img/logo-big.jpg') !!}" alt="" /> </a>
         </div>
 
         <div class="content">
