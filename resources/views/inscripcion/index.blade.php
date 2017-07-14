@@ -101,13 +101,19 @@
                 </div>
                 <div class="form-group">
                     <div class="input-icon">
+                        {!! Form::label('FAUA - 20 DE JULIO') !!}
+                        {!! Form::checkbox('faua','true',false) !!}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-icon">
                         {!! Form::label('FIEECS - 21 DE JULIO') !!}
                         {!! Form::checkbox('fieecs','true',false) !!}
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-icon">
-                        {!! Form::label('FISS - 26 DE JULIO') !!}
+                        {!! Form::label('FIIS - 26 DE JULIO') !!}
                         {!! Form::checkbox('fiis','true',false) !!}
                     </div>
                 </div>
