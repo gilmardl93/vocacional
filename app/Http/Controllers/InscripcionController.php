@@ -17,7 +17,7 @@ class InscripcionController extends Controller
     public function registrar(InscripcionRequest $request)
     {
         $validar = Inscripcion::Validar($request->dni)->count();
-        if($request->fiis == "" && $request->fieecs == "" && $request->faua == "")
+        if($request->fiis == "" && $request->fieecs == "" && $request->faua == "" && $request->fiqt == "" && $request->figmm == "" && $request->fia == "")
         {
             return redirect('/')->with('message','<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>DEBE SELECCIONAR UNA FACULTAD COMO MINIMO!</strong> </div>');
         }else 
@@ -32,9 +32,12 @@ class InscripcionController extends Controller
                 $data->dni = $request->dni;
                 $data->email = $request->email;
                 $data->telefono = $request->telefono;
+                $data->faua = $request->faua;
                 $data->fieecs = $request->fieecs;
                 $data->fiis = $request->fiis;
-                $data->faua = $request->faua;
+                $data->figmm = $request->figmm;
+                $data->fiqt = $request->fiqt;
+                $data->fia = $request->fia;
                 $data->colegio = $request->colegio;
                 $data->save();
 

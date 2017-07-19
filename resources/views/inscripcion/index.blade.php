@@ -119,6 +119,24 @@
                 </div>
                 <div class="form-group">
                     <div class="input-icon">
+                        {!! Form::label('FIGMM - 03 DE AGOSTO') !!}
+                        {!! Form::checkbox('figmm','true',false) !!}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-icon">
+                        {!! Form::label('FIQT - 04 DE AGOSTO') !!}
+                        {!! Form::checkbox('fiqt','true',false) !!}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-icon">
+                        {!! Form::label('FIA - 25 DE AGOSTO') !!}
+                        {!! Form::checkbox('fia','true',false) !!}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-icon">
                         {!! Form::submit('REGISTRAR',['class' => 'btn btn-primary']) !!}
                     </div>
                 </div>

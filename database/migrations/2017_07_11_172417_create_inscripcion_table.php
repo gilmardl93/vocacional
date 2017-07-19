@@ -23,8 +23,12 @@ class CreateInscripcionTable extends Migration
             $table->string('telefono',12);
             $table->string('email',70);
             $table->string('colegio',200);
+            $table->boolean('faua')->nullable();
             $table->boolean('fieecs')->nullable();
             $table->boolean('fiis')->nullable();
+            $table->boolean('figmm')->nullable();
+            $table->boolean('fiqt')->nullable();
+            $table->boolean('fia')->nullable();
             $table->timestamps();
         });
     }
