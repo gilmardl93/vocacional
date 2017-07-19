@@ -102,7 +102,7 @@
                 <div class="form-group">
                     <div class="input-icon">
                         {!! Form::label('FAUA - 20 DE JULIO') !!}
-                        {!! Form::checkbox('faua','true',false) !!}
+                        {!! Form::checkbox('faua','true',false, ['disabled' => 'true']) !!}
                     </div>
                 </div>
                 <div class="form-group">
