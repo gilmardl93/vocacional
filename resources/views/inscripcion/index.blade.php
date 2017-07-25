@@ -108,13 +108,13 @@
                 <div class="form-group">
                     <div class="input-icon">
                         {!! Form::label('FIEECS - 21 DE JULIO') !!}
-                        {!! Form::checkbox('fieecs','true',false) !!}
+                        {!! Form::checkbox('fieecs','true',false, ['disabled' => 'true']) !!}
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-icon">
                         {!! Form::label('FIIS - 26 DE JULIO') !!}
-                        {!! Form::checkbox('fiis','true',false) !!}
+                        {!! Form::checkbox('fiis','true',false, ['disabled' => 'true']) !!}
                     </div>
                 </div>
                 <div class="form-group">
