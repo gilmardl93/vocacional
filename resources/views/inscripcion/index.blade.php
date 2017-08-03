@@ -120,13 +120,13 @@
                 <div class="form-group">
                     <div class="input-icon">
                         {!! Form::label('FIGMM - 03 DE AGOSTO') !!}
-                        {!! Form::checkbox('figmm','true',false) !!}
+                        {!! Form::checkbox('figmm','true',false, ['disabled' => 'true']) !!}
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-icon">
                         {!! Form::label('FIQT - 04 DE AGOSTO') !!}
-                        {!! Form::checkbox('fiqt','true',false) !!}
+                        {!! Form::checkbox('fiqt','true',false, ['disabled' => 'true']) !!}
                     </div>
                 </div>
                 <div class="form-group">
