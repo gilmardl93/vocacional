@@ -27,33 +27,37 @@ class InscripcionController extends Controller
                 return redirect('/')->with('message','<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>DEBE SELECCIONAR UNA FACULTAD COMO MINIMO!</strong> </div>');
             }else
             {
-                $data = new Inscripcion();
-                $data->paterno = strtoupper($request->paterno);
-                $data->materno = strtoupper($request->materno);
-                $data->nombres = strtoupper($request->nombres);
-                $data->edad = $request->edad;
-                $data->dni = $request->dni;
-                $data->email = $request->email;
-                $data->telefono = $request->telefono;
-                $data->FAUA = $request->FAUA;
-                $data->FIC = $request->FIC;
-                $data->FIECS = $request->FIECS;
-                $data->FIGMN = $request->FIGMN;
-                $data->FIIS = $request->FIIS;
-                $data->FIEE = $request->FIEE;
-                $data->FIM = $request->FIM;
-                $data->FC = $request->FC;
-                $data->FIP = $request->FIP;
-                $data->FIQT = $request->FIQT;
-                $data->FIA = $request->FIA;
-                $data->colegio = $request->colegio;
-                $data->save();
+                $this->datos($request);
                 return redirect('/')->with('message','<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>INSCRIPCION SATISFACTORIA!</strong> </div>');
             }
         }else 
         {
             return redirect('/')->with('message','<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>USTED SE ENCUENTRA REGISTRADO!</strong> </div>');
         }
-        
+    }
+
+    public function datos($request)
+    {
+        $data = new Inscripcion();
+        $data->paterno = strtoupper($request->paterno);
+        $data->materno = strtoupper($request->materno);
+        $data->nombres = strtoupper($request->nombres);
+        $data->edad = $request->edad;
+        $data->dni = $request->dni;
+        $data->email = $request->email;
+        $data->telefono = $request->telefono;
+        $data->FAUA = $request->FAUA;
+        $data->FIC = $request->FIC;
+        $data->FIECS = $request->FIECS;
+        $data->FIGMN = $request->FIGMN;
+        $data->FIIS = $request->FIIS;
+        $data->FIEE = $request->FIEE;
+        $data->FIM = $request->FIM;
+        $data->FC = $request->FC;
+        $data->FIP = $request->FIP;
+        $data->FIQT = $request->FIQT;
+        $data->FIA = $request->FIA;
+        $data->colegio = $request->colegio;
+        $data->save();
     }
 }
