@@ -99,42 +99,16 @@
                         {!! Form::label('PUEDE SELECCIONAR UNA FACULTAD O LOS DOS') !!}
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="input-icon">
-                        {!! Form::label('FAUA - 20 DE JULIO') !!}
-                        {!! Form::checkbox('faua','true',false, ['disabled' => 'true']) !!}
+                @foreach($facultad as $row)
+                    @if($row->activo == true)
+                    <div class="form-group">
+                        <div class="input-icon">
+                            {!! Form::label($row->nombre.' '.$row->fecha) !!}
+                            {!! Form::checkbox($row->sigla,'true',false,['id' => 'facultad']) !!}
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-icon">
-                        {!! Form::label('FIEECS - 21 DE JULIO') !!}
-                        {!! Form::checkbox('fieecs','true',false, ['disabled' => 'true']) !!}
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-icon">
-                        {!! Form::label('FIIS - 26 DE JULIO') !!}
-                        {!! Form::checkbox('fiis','true',false, ['disabled' => 'true']) !!}
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-icon">
-                        {!! Form::label('FIGMM - 03 DE AGOSTO') !!}
-                        {!! Form::checkbox('figmm','true',false, ['disabled' => 'true']) !!}
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-icon">
-                        {!! Form::label('FIQT - 04 DE AGOSTO') !!}
-                        {!! Form::checkbox('fiqt','true',false, ['disabled' => 'true']) !!}
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-icon">
-                        {!! Form::label('FIA - 25 DE AGOSTO') !!}
-                        {!! Form::checkbox('fia','true',false) !!}
-                    </div>
-                </div>
+                    @endif           
+                @endforeach
                 <div class="form-group">
                     <div class="input-icon">
                         {!! Form::submit('REGISTRAR',['class' => 'btn btn-primary']) !!}
