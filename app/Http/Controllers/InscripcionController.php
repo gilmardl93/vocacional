@@ -46,17 +46,17 @@ class InscripcionController extends Controller
         $data->dni = $request->dni;
         $data->email = $request->email;
         $data->telefono = $request->telefono;
-        $data->FAUA = $request->FAUA;
-        $data->FIC = $request->FIC;
-        $data->FIECS = $request->FIECS;
-        $data->FIGMN = $request->FIGMN;
-        $data->FIIS = $request->FIIS;
-        $data->FIEE = $request->FIEE;
-        $data->FIM = $request->FIM;
-        $data->FC = $request->FC;
-        $data->FIP = $request->FIP;
-        $data->FIQT = $request->FIQT;
-        $data->FIA = $request->FIA;
+        $data->faua = $request->FAUA;
+        $data->fic = $request->FIC;
+        $data->fiecs = $request->FIECS;
+        $data->figmn = $request->FIGMN;
+        $data->fiis = $request->FIIS;
+        $data->fiee = $request->FIEE;
+        $data->fim = $request->FIM;
+        $data->fc = $request->FC;
+        $data->fip = $request->FIP;
+        $data->fiqt = $request->FIQT;
+        $data->fia = $request->FIA;
         $data->colegio = $request->colegio;
         $data->save();
     }
