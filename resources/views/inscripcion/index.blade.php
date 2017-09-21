@@ -96,7 +96,7 @@
                 </div>
                 <div class="form-group">
                     <div class="input-icon">
-                        {!! Form::label('PUEDE SELECCIONAR UNA FACULTAD O LOS DOS') !!}
+                        {!! Form::label('DEBE SELECCIONAR LA FACULTAD QUE DESEA ASISTIR') !!}
                     </div>
                 </div>
                 @foreach($facultad as $row)
